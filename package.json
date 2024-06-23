@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/ChrisMichaelPerezSantiago/zillow-api.git"
   },
-  "keywords": [],
+  "keywords": ["zillow", "zillow-api", "zillow-scraper"],
   "sideEffects": false,
   "exports": {
     ".": {

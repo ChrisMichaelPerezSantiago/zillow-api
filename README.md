@@ -1,7 +1,7 @@
 # ✓ Custom Zillow API Scraper
 > The Custom Zillow API Scraper is a tool designed to collect real estate data from Zillow. It fetches property details, location data, photos, and historical prices, ideal for real estate analysis, market research, and investment opportunities.
 
-# In Development ... 
+# In Development ...
 
 ## 📦 Installation
 ```shell
