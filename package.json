@@ -1,0 +1,79 @@
+{
+  "name": "zillow-api",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@9.1.1",
+  "description": "The Custom Zillow API Scraper is a tool designed to collect real estate data from Zillow. It fetches property details, location data, photos, and historical prices, ideal for real estate analysis, market research, and investment opportunities.",
+  "author": "Chris M. <chrisperezsantiago1@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ChrisMichaelPerezSantiago/zillow-api#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisMichaelPerezSantiago/zillow-api.git"
+  },
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && npm publish",
+    "start": "esno src/index.ts",
+    "playground": "esno playground/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepare": "simple-git-hooks"
+  },
+  "dependencies": {
+    "@types/cheerio": "^0.22.35",
+    "@types/lodash": "^4.17.5",
+    "cheerio": "^1.0.0-rc.12",
+    "ky": "^1.3.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.18.1",
+    "@antfu/ni": "^0.21.12",
+    "@antfu/utils": "^0.7.8",
+    "@types/node": "^20.12.12",
+    "bumpp": "^9.4.1",
+    "eslint": "^9.3.0",
+    "esno": "^4.7.0",
+    "lint-staged": "^15.2.2",
+    "pnpm": "^9.1.1",
+    "rimraf": "^5.0.7",
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "^5.4.5",
+    "unbuild": "^2.0.0",
+    "vite": "^5.2.11",
+    "vitest": "^1.6.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
